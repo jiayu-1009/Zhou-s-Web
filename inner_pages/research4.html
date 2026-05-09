@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research 4 – Exploring the Pattern and Influence Factors …</title>
+  <style>
+    body {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #000;
+    }
+    .container {
+      width: 900px;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: rgb(46, 54, 146);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    h2 {
+      color: rgb(46, 54, 146);
+      font-size: 20px;
+      margin-top: 30px;
+    }
+    .binary-divider {
+    position: relative;
+    text-align: center;
+    margin: 40px 0;
+    }
+  .binary-divider::before {
+      content: "01000101 01100100 01110101 01100011 01100001 01110100 01101001 01101111 01101110";
+      display: inline-block;
+      font-family: monospace;
+      color: #769cc24a;
+      background: linear-gradient(to right, #fff0, #eee, #fff0);
+      padding: 0 10px;
+      position: relative;
+      z-index: 1;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover { color: #f09228; }
+    img { border-radius: 15px; margin: 10px 0; }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: gray;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Exploring the Pattern and Influence Factors in the Correlation Between Learning Engagement and Academic Achievement in Online Learning</h1>
+      <p><i>Global Chinese Conference on Computers in Education, GCCCE 2026 (First Author)</i></p>
+      <p><b>Yaoyuan Zhou</b>, Yuhan Gai, Qingyang Liu, Jiamin Ren</p>
+      <p class="binary-divider"></p>
+    </header>
+
+    <main>
+      <h2>Abstract</h2>
+      <p>This study investigates the complex patterns linking learning engagement to academic achievement in online
+learning environments. By analyzing data from 217 university students using regression, K-means clustering, ANOVA,
+and Epistemic Network Analysis (ENA), the research reveals that simple positive correlations obscure distinct student
+profiles. Cluster analysis identified three groups(high engagement & achievement, low engagement & achievement, low
+engagement/high achievement), including a notable "low-engagement/high-achievement" profile. Results indicate that
+behavioral engagement serves as the primary differentiator between high and low academic achievement. Furthermore,
+ENA findings suggest that low-engagement/high-achievement students compensate for lower behavioral frequency with
+superior cognitive quality, characterized by integrated knowledge generation, whereas low-performing students rely on
+superficial referencing. These findings challenge linear engagement–achievement models, demonstrating that academic
+success depends less on the magnitude of engagement than on the structural quality of cognitive processing and
+behavioral execution.</p>
+
+
+      <h2>Research Focus</h2>
+      <p>While prior research has established a positive correlation between learning engagement and
+        academic achievement, this study goes beyond simple linear associations to uncover the complex,
+        latent patterns linking engagement to performance in online learning environments. It aims to
+        identify distinct student engagement–achievement profiles and investigate the cognitive
+        mechanisms—captured through epistemic network analysis of online discussion comments—that
+        explain why students with similar engagement levels can achieve markedly different academic outcomes.</p>
+
+
+      <h2>Methodogy</h2>
+      <p>This study utilized course data from three separate class sessions of the "Educational Technology"
+        curriculum offered during the 2024 spring semester over 15 weeks at a university in Beijing. The
+        course was delivered online via a self-developed platform that collected students' assignment scores,
+        course completion rates, comment content, and operational log data. A total of 217 valid samples
+        were obtained (149 females, 68 males) from diverse majors including law, chemistry, mathematics,
+        education, and literature.
+        <br>
+        <img src="../pictures/research_inner_4.1.png" alt="Research 4 figure" width="100%">
+        <br>
+        Learning engagement was measured across three dimensions based on Martin's (2022) framework:
+        <b>cognitive engagement</b> was assessed through participation scores (content completion, chapter
+        quizzes, and attendance); <b>affective engagement</b> was measured using the Online Self-regulated
+        Learning Questionnaire (OSLQ, Cronbach's α = 0.90); and <b>behavioral engagement</b> was
+        captured through platform interaction logs across five indicators—page views, key-point clicks,
+        comments, AI utilization, and pause frequency. Academic achievement was measured by end-of-semester
+        exam scores.
+        <br>
+        The analytical procedure consisted of three stages: (1) linear regression to assess the predictive
+        validity of overall engagement on achievement; (2) K-means clustering (K=3) to identify latent
+        engagement–achievement profiles; and (3) mixed-design ANOVA to decompose the effects of the three
+        engagement dimensions across clusters. To characterize cognitive features, all student comments
+        were encoded using Biasutti's (2017) asynchronous online discussion coding framework across seven
+        dimensions (inferencing, producing, developing, evaluating, summarizing, organizing, and supporting),
+        with a Cohen's kappa of 0.91. Epistemic Network Analysis (ENA) was then conducted to model and
+        visualize the cognitive networks of different student profiles.</p>
+
+      <h2>Key Finding</h2>
+      <p><b>Weak Predictive Power of Aggregate Engagement:</b>
+        Although overall learning engagement significantly predicted academic achievement (β = 0.179,
+        p = 0.001), the explanatory power was very limited (R² = 0.048). In the multiple regression,
+        only cognitive engagement emerged as a significant predictor (R² = 0.120), indicating that
+        simple linear models fail to capture the complexity of student dynamics.
+        <br>
+        <img src="../pictures/research_inner_4.2.png" alt="Research 4 figure" width="100%">
+        <br>
+        <b>Three Distinct Student Profiles:</b>
+        K-means clustering identified three groups: <i>high engagement/high achievement</i> (Cluster 1,
+        n = 102), <i>low engagement/low achievement</i> (Cluster 2, n = 43), and <i>low engagement/high
+        achievement</i> (Cluster 3, n = 72). The existence of Cluster 3 challenges the assumption that
+        higher engagement is always necessary for strong academic performance.
+        <br>
+        <img src="../pictures/research_inner_4.3.png" alt="Research 4 figure" width="100%">
+        <br>
+        <b>Behavioral Engagement as the Key Differentiator:</b>
+        ANOVA revealed a significant interaction between engagement dimensions and cluster membership
+        (F = 51.0, p < .001). Cognitive engagement was consistently high across all three groups.
+        In contrast, behavioral engagement showed a precipitous divergence—Cluster 1 maintained elevated
+        levels, while Clusters 2 and 3 experienced sharp declines—indicating that behavioral participation
+        is the primary factor distinguishing high from low achievers.
+        <br>
+        <img src="../pictures/research_inner_4.4.png" alt="Research 4 figure" width="100%">
+        <img src="../pictures/research_inner_4.5.png" alt="Research 4 figure" width="100%">
+        <br>
+        <b>Cognitive Quality Over Quantity:</b>
+        ENA revealed that high-engagement/high-achievement students concentrated on knowledge generation
+        (producing), cognitive deepening (developing), and community support (supporting). Low-engagement/
+        low-achievement students remained fixated on mechanical referencing (inferencing) and summarization
+        (summarizing). Most notably, low-engagement/high-achievement students exhibited dense, interconnected
+        cognitive networks characterized by integrated knowledge generation—compensating for lower behavioral
+        frequency with superior cognitive quality and learning efficiency.</p>
+        <br>
+        <img src="../pictures/research_inner_4.6.png" alt="Research 4 figure" width="100%">
+
+
+      <h2>Discussion &amp; Conclusion</h2>
+      <p>
+        This study refines the correlational patterns between learning engagement and academic achievement,
+        the findings demonstrate that academic success depends less on the magnitude of engagement than on the structural quality of cognitive processing and behavioral
+        execution. The identification of a "low-engagement/high-achievement" profile is particularly significant:
+        these students do not necessarily engage less with course content; rather, their engagement is more
+        efficient, characterized by deeper cognitive integration rather than superficial participation.
+        <br>
+        Practically, these findings offer actionable insights for online instruction. Educators are advised to
+        encourage students to actively utilize online platforms to bolster behavioral engagement, and to design
+        discussion activities that foster comments with greater cognitive depth and breadth rather than mere
+        frequency. 
+      </p>
+    </main>
+
+    <p><a href="../index.html">← Back to Mainpage</a></p>
+
+    <footer>
+      <p>© 2025 Yaoyuan Zhou</p>
+    </footer>
+  </div>
+</body>
+</html>
