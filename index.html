@@ -142,7 +142,128 @@
             height: 200px;
         }
     }
-    
+
+    /* Gallery section styles */
+    .gallery-section {
+        display: flex;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 15px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .gallery-wrapper {
+        position: relative;
+        width: 48%;
+        min-width: 0;
+    }
+
+    .gallery-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 0;
+        border-radius: 12px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-scroll::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .gallery-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .gallery-scroll::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 3px;
+    }
+
+    .gallery-scroll img {
+        width: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .gallery-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(46, 54, 146, 0.75);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 36px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .gallery-wrapper:hover .gallery-arrow {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .gallery-arrow:hover {
+        background: rgba(240, 146, 40, 0.9);
+    }
+
+    .gallery-arrow-left {
+        left: 10px;
+    }
+
+    .gallery-arrow-right {
+        right: 10px;
+    }
+
+    .gallery-text {
+        width: 49%;
+        padding: 5px 0;
+    }
+
+    .gallery-text h3 {
+        color: #2e3692;
+        font-size: 1.5em;
+        margin-bottom: 18px;
+        font-weight: 600;
+    }
+
+    .gallery-text p {
+        line-height: 1.9;
+        text-align: justify;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-section {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .gallery-wrapper, .gallery-text {
+            width: 100%;
+        }
+        .gallery-scroll img {
+            height: 220px;
+        }
+        .gallery-arrow {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
     footer {
       text-align: center;
       margin-top: 40px;
@@ -167,28 +288,63 @@
 
 
   <tr>
-    <td width="30%" valign="top" style="vertical-align:top; text-align:center;">
-      <img
-        src="self_picture.jpg"
-        alt="Yaoyuan Zhou"
-        style="width:245px; height:280.13px; border-radius:20px; display:block; margin:0 auto;"
-      >
-      <p style="margin-top:10px;">
-        | <a href="pdf_files/CV.pdf">CV</a> |
-        <a href="mailto:amiao1120@gmail.com">Email</a> |
-        <a href="https://github.com/jiayu-1009">Github</a> |
-      </p>
+    <td width="100%" valign="top" align="justify" style="vertical-align:top; padding-bottom:5px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="315" valign="middle" align="center" style="padding-right:25px;">
+            <img
+              src="self_picture.jpg"
+              alt="Yaoyuan Zhou"
+              style="width:275px; height:300px; border-radius:20px;"
+            >
+            <p style="margin-top:10px; margin-bottom:2px;">
+              | <a href="pdf_files/CV.pdf">CV</a> |
+              <a href="https://github.com/jiayu-1009">Github</a> |
+            </p>
+            <p style="margin-top:2px;">
+              |<a href="mailto:amiao1120@gmail.com">amiao1120@gmail.com</a> |
+            </p>
+          </td>
+          <td valign="top" align="justify">
+            <p style="margin-top:0;">I am a third-year undergraduate Educational Technology student in <a href="https://fe-english.bnu.edu.cn/index.shtml">Beijing Normal University</a><b> (Education QS 12th in the world-2026)</b>
+              advised by <a href="https://fe.bnu.edu.cn/pc/cms1info/resume/50/143https://fe.bnu.edu.cn/pc/cms1info/resume/50/143">Wu juan</a> in FESH group and <b>Advanced Innovation Center for Future Education of Beijing Normal University</b>.
+              <br><br>
+              In the previous study, I gain <b>GPA 3.7</b> and ranked <b>1/23</b> in comprehensive evaluation of the major. I have also been awarded the <b>Second-Class Jingshi Scholarship</b>,
+              <b>First-Class Merit-Based Scholarship</b> and the <b>The National Institute of Education(NIE) Singapore Undergraduate Online Scholarship (National Technology University) </b>.
+              <br><br>
+              I spent an <b>exchange semester</b> at <a href="https://www.polyu.edu.hk/">Hong Kong Polytechnic University</a> in the major of Artificial Intelligence in 2026 fall.
+              I am also a Research Assistant in the group of <a href="https://www.eduhk.hk/mit/en/staff/tstbai">Bai Shurui Tiffany</a> and  <a href="https://home.v2elearn.com/index">Chen Gaowei</a>. </p>
+          </td>
+        </tr>
+      </table>
     </td>
+  </tr>
+</table>
 
-    <td width="70%" valign="top" align="justify" style="vertical-align:top;">
-      <p>I am a third-year undergraduate Educational Technology student in <a href="https://english.bnu.edu.cn/">Beijing Normal University</a> 
-        advised by <a href="https://fe.bnu.edu.cn/pc/cms1info/resume/50/143https://fe.bnu.edu.cn/pc/cms1info/resume/50/143">Wu juan</a>.
-        I spent an exchange semester at <a href="https://www.polyu.edu.hk/">Hong Kong Polytechnic University</a> in the major of Artificial Intelligence in 2026 fall.
-        I am also a Research Assistant in the group of <a href="https://www.eduhk.hk/mit/en/staff/tstbai">Bai Shurui Tiffany</a>, 
-        responsible for the research of Intelligence Tutoring Systems (ITS) </p>
-      <p><strong style="font-size:20px; color: rgb(46, 54, 146);">Goal: </strong> From the standpoint of <b>Education</b>, leveraging the potential of <b>Technology</b> in pedagogical practices to explore pathways towards harmonious coexistence between humanity and the world</p>
-      <p><strong style="font-size:20px; color: rgb(46, 54, 146);">Focus: </strong> Ariticial Intelligence Assisted Learning, Intelligence Tutoring Systems, Large Language Model, AI Teaching Methodogy, Prompt Engineer</p>
-      <p><strong style="font-size:20px; color: rgb(46, 54, 146);">Method: </strong> Large language model design and development, Deep Network Analysis</p>
+<table width="900px" align="center" border="0" cellspacing="0" cellpadding="4">
+  <tr>
+    <td align="center" style="padding:8px 30px;">
+      <p style="margin-top:0; margin-bottom:6px;"><strong style="font-size:20px; color: rgb(46, 54, 146);">Goal:
+      </strong> From the standpoint of <b>Education</b>, leveraging the potential of <b>Technology</b>
+      in pedagogical practices to explore pathways towards harmonious coexistence between humanity and the world</p>
+
+      <p style="margin:0;"><strong style="font-size:20px; color: rgb(46, 54, 146);">Focus: </strong>
+        Ariticial Intelligence Assisted Learning, Intelligence Tutoring Systems, Large Language Model,
+        AI Teaching Methodogy, Prompt Engineer</p>
+    </td>
+  </tr>
+</table>
+
+
+
+<!-- ===== PhD Seeking Notice ===== -->
+<table width="900px" align="center" border="0" cellspacing="0" cellpadding="12">
+  <tr>
+    <td align="center" style="padding:20px 30px;">
+      <p style="font-size:18px; line-height:1.9; color:#2e3692; text-align:center; margin:0;">
+        <strong>I am actively searching for a 2027 fall PhD position in Educational Technology, Human-Computer Interaction. 
+        Please to contact me if you have any opportunities!</strong>
+      </p>
     </td>
   </tr>
 </table>
@@ -198,7 +354,12 @@
 
 <!-- ===== Research Outputs ===== -->
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading style="color: rgb(46, 54, 146); font-size: 28px;">&nbsp;&nbsp;Research Outputs</sectionheading></td></tr>
+  <tr><td><sectionheading style="color: rgb(46, 54, 146); font-size: 35px;">Research Outputs</sectionheading></td></tr>
+</table>
+
+<!-- ===== Research output-Journal===== -->
+<table width="900px" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr><td><sectionheading style="color: rgb(46, 54, 146); font-size: 23px;">-Journal-</sectionheading></td></tr>
 </table>
 
 <!-- ===== Research 1 ===== -->
@@ -272,7 +433,10 @@
 </table>
 
 <br><br>
-
+<!-- ===== Research output-onference===== -->
+<table width="900px" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr><td><sectionheading style="color: rgb(46, 54, 146); font-size: 23px;">-Conference-</sectionheading></td></tr>
+</table>
 <!-- ===== Research 4 ===== -->
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="15">
   <tr>
@@ -352,7 +516,7 @@
 
 <!-- ===== Research Projects ===== -->
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 28px;">&nbsp;&nbsp;Research Projects</sectionheading></td></tr>
+  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 35px;">Research Projects</sectionheading></td></tr>
 </table>
 
 <!-- ===== Research Project 1 ===== -->
@@ -452,7 +616,7 @@ validate system efficacy, integrating findings into iterative development cycles
 
 <!-- ===== Internships ===== -->
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 28px;">&nbsp;&nbsp;Internships</sectionheading></td></tr>
+  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 35px;">Internships</sectionheading></td></tr>
 </table>
 
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="15">
@@ -513,22 +677,68 @@ validate system efficacy, integrating findings into iterative development cycles
 
 <!-- ===== Learn More of Me ===== -->
 <table width="900px" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 28px;">&nbsp;&nbsp;Learn More about Me</sectionheading></td></tr>
+  <tr><td><sectionheading style="color: rgb(46, 54, 146);font-size: 35px;">Learn More about Me</sectionheading></td></tr>
 </table>
-<table width="900px" align="center" border="0" cellspacing="20" cellpadding="0">
-  <!-- 第一行：3张图 -->
+
+<!-- ===== Cycling ===== -->
+<div class="gallery-section">
+    <div class="gallery-wrapper">
+        <div class="gallery-scroll" id="cyclingGallery">
+            <img src="pictures/habit_cycling1.png" alt="Cycling 1">
+            <img src="pictures/habit_cycling2.png" alt="Cycling 2">
+            <img src="pictures/habit_cycling3.png" alt="Cycling 2">
+        </div>
+        <div class="gallery-arrow gallery-arrow-left" onclick="scrollGallery('cyclingGallery', -1)">&#8249;</div>
+        <div class="gallery-arrow gallery-arrow-right" onclick="scrollGallery('cyclingGallery', 1)">&#8250;</div>
+    </div>
+    <div class="gallery-text">
+        <h3>Cycling</h3>
+        <p>
+            Cycling is my favorite sport! Having cycled for over <b>6,000 kilometers</b>  across cities,
+            countryside roads, and mountain trails, I cherish the feeling of personally experiencing
+            every bit of the ground beneath my wheels. Each ride is a journey of endurance and discovery —
+            the wind in my face, the rhythm of pedaling, and the ever-changing landscapes along the cycling is
+            the best way to explore the world.
+        </p>
+    </div>
+</div>
+
+<!-- ===== Teaching Practice ===== -->
+<div class="gallery-section">
+    <div class="gallery-wrapper">
+        <div class="gallery-scroll" id="teachingGallery">
+            <img src="pictures/habit_teaching1.png" alt="Teaching 1">
+            <img src="pictures/habit_teaching2.png" alt="Teaching 2">
+            <img src="pictures/habit_teaching3.png" alt="Teaching 2">
+        </div>
+        <div class="gallery-arrow gallery-arrow-left" onclick="scrollGallery('teachingGallery', -1)">&#8249;</div>
+        <div class="gallery-arrow gallery-arrow-right" onclick="scrollGallery('teachingGallery', 1)">&#8250;</div>
+    </div>
+    <div class="gallery-text">
+        <h3>Teaching Practice</h3>
+        <p>
+            My passion for education lies not only in research but, more importantly, in practice.
+            I have delivered over <b>200 hours</b> of instruction across four rural schools, designing and
+            teaching courses that integrate technology into the classroom. These hands-on experiences
+            have deepened my understanding of diverse learners' needs and strengthened my commitment
+            to making quality education accessible to every student, regardless of their background.
+        </p>
+    </div>
+</div>
+
+<!-- ===== Remaining three: Bird-viewing, Special Education Volunteer, Opera & Movies ===== -->
 <div class="card-container">
     <div class="card-row">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="pictures/habit_birdviewing.jpg" alt="Image 1">
+                <img src="pictures/habit_birdviewing.jpg" alt="Bird-viewing">
             </div>
             <div class="flip-card-back">
                 <div>
                     <h3>Bird-viewing</h3>
-                    <p>Occasionally, I find myself in the company of friends, 
-                      hiking through mountains and forests, identifying birds and plants. 
+                    <p>Occasionally, I find myself in the company of friends,
+                      hiking through mountains and forests, identifying birds and plants.
                       This profound connection with nature brings me a deep sense of bliss.</p>
                 </div>
             </div>
@@ -537,14 +747,14 @@ validate system efficacy, integrating findings into iterative development cycles
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="pictures/habit_volunteer2.jpg" alt="Image 2">
+                <img src="pictures/habit_volunteer2.jpg" alt="Special education volunteers">
             </div>
             <div class="flip-card-back">
                 <div>
                     <h3>Special education volunteers</h3>
-                    <p>I've been a companion in an autism support program for 2 years. 
-                      It's here that I've discovered the precious value of mutual trust and care, 
-                      which also gives me a new understanding of special special education.</p>
+                    <p>I've been a companion in an autism support program for 2 years.
+                      It's here that I've discovered the precious value of mutual trust and care,
+                      which also gives me a new understanding of special education.</p>
                 </div>
             </div>
         </div>
@@ -552,62 +762,35 @@ validate system efficacy, integrating findings into iterative development cycles
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="pictures/habit_cycling.jpg" alt="Image 3">
+                <img src="pictures/habit_opear.jpg" alt="Opera & Movies">
             </div>
             <div class="flip-card-back">
                 <div>
-                    <h3>Cycling</h3>
-                    <p>Cycling is my favorite sport! Having cycled for over 4,000 kilometers, 
-                    I cherish the feeling of personally experiencing every bit of the ground beneath my wheels.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="card-row">
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="pictures/habit_teaching1.jpg" alt="Image 4">
-            </div>
-            <div class="flip-card-back">
-                <div>
-                    <h3>Teaching</h3>
-                    <p>My passion for education lies not only in research but, more importantly, 
-                      in practice. I have already delivered over 50 hours of instruction across 
-                      four rural schools.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="pictures/habit_opear.jpg" alt="Image 5">
-            </div>
-            <div class="flip-card-back">
-                <div>
-                    <h3>Opear & Movies</h3>
-                    <p>Drama and film are two of my favorite pastimes. 
-                      Immersing myself in other people's stories has made 
+                    <h3>Opera & Movies</h3>
+                    <p>Drama and film are two of my favorite pastimes.
+                      Immersing myself in other people's stories has made
                       my life richer and more vibrant than ever before.</p>
                 </div>
             </div>
-          </div>
-
+        </div>
     </div>
     </div>
 </div>
-</table>
     <footer>
-      <p>© 2025 Yaoyuan Zhou</p>
+      <p>© 2026 Yaoyuan Zhou</p>
     </footer>
 
+<script>
+function scrollGallery(galleryId, direction) {
+    var gallery = document.getElementById(galleryId);
+    var scrollAmount = gallery.clientWidth;
+    gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+</script>
 
 </td></tr>
 </body>
 </html>
-
 
 
 
